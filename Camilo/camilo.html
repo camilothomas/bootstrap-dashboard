@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <title>Plain dash</title>
+  </head>
+  <body>
+    <!-- setting up a grid -->
+    <div class="container">
+      <div class="row bg-light">
+          <div class="col-2 align-self-center text-monospace">
+          Inventive Academy
+          </div>
+          <div class="col-9 border border-info align-self-center">
+          Trello KPI Dashboard
+          </div>
+          <div class="col-1">
+          <div type="button" class="btn btn-secondary">Sign Out</div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-2 bg-light">
+          <ul class="list-group">
+            <li class="list-group-item bg-info">Start</li>
+            <li class="list-group-item">Roslyn</li>
+            <li class="list-group-item">Thinh</li>
+            <li class="list-group-item">Camilo</li>
+            <li class="list-group-item">--</li>
+            <li class="list-group-item">--</li>
+            <li class="list-group-item">--</li>
+            <li class="list-group-item">--</li>
+            <li class="list-group-item">...</li>
+
+            
+          </ul>
+        </div>
+          <div class="col-10 p-2">
+
+          <canvas class="chartjs-render-monitor" id="KPI"></canvas>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-12 bg-dark text-center text-white">
+        <footer>COPYRIGHT STARZ CLUB</footer>
+        </div>
+      </div>
+    </div>
+    <script src="./js/Chart.min.js.download"></script>
+    <script>
+      var ctx = document.getElementById("KPI");
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          datasets: [{
+            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+            lineTension: 0,
+            backgroundColor: 'violet',
+            borderColor: 'gray',
+            borderWidth: 3,
+            pointBorderColor: 'purple',
+            pointRadius: 12
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: false,
+          }
+        }
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"</script>
+  </body>
+</html>
